@@ -1,0 +1,32 @@
+.navbar-brand {
+  cursor: pointer;
+}
+.left {
+  height: calc(100vh - 56px);
+}
+.center {
+  height: calc(100vh - 56px);
+}
+.sidenav-second-level,
+.sidenav-third-level,
+.nav-item {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: #eee;
+}
+
+.sidenav-second-level a {
+  color: #eee;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.sidenav-second-level a:hover {
+  background: #2196f3;
+  color: white;
+  transition: 0.9s;
+}

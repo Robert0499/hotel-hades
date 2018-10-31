@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-dark">
+	<a class="navbar-brand text-white">
+		<img src="../public/app/img/hotel1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Hades Hotel
+	</a>
+	<form class="form-inline 	">
+		<i class="fa fa-power-off fa-2x my-2 my-sm-0 text-danger d-none d-sm-block" ng-click="cerrar()" style="cursor: pointer;"></i>
+	</form>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-12 mt-5">
+			<div class="card">
+				<div class="card-body">
+					<div class="d-flex justify-content-end">
+						<h5>Habitaciones ocupadas
+							<span class="badge badge-info">{{inasistencias}}</span>
+						</h5>
+					</div>
+					<canvas id="myChart" width="400" height="150"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,67 @@
+<nav class="navbar navbar-dark bg-dark">
+	<a class="navbar-brand text-white">
+		<img src="../public/app/img/hotel1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Hades Hotel
+	</a>
+	<form class="form-inline my-2 my-lg-0">
+		<i class="fa fa-power-off fa-2x my-2 my-sm-0 text-danger d-none d-sm-block" ng-click="cerrar()" style="cursor: pointer;"></i>
+	</form>
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-2 bg-dark text-white p-0 left d-sm-none  d-lg-block d-xl-block text-center">
+			<li class="nav-item" data-toggle="tooltip" data-placement="right">
+				<a class="nav-link mt-4">
+					<i class="fa fa-fw fa-cogs"></i>
+					<span class="nav-link-text" style="font-size: 25px">
+						Reservaciones</span>
+				</a>
+				<a class="nav-link mt-4" ng-click="pisos()">
+					<i class="fa fa-fw fa-cogs"></i>
+					<span class="nav-link-text" style="font-size: 25px">
+						Gestionar pisos</span>
+				</a>
+				<a class="nav-link mt-4" ng-click="hab()">
+					<i class="fa fa-fw fa-cogs"></i>
+					<span class="nav-link-text" style="font-size: 25px">
+						Gestionar habitaciones</span>
+				</a>
+			</li>
+		</div>
+		<div class="col-10 p-0">
+			<div class="card center">
+				<div class="card-header text-center">
+					<h1>Reservaciones</h1>
+				</div>
+				<div class="card-body ">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Habitacion</th>
+									<th scope="col">Reservador</th>
+									<th scope="col">Categoria</th>
+									<th scope="col">Piso</th>
+									<th scope="col">Fecha inicio</th>
+									<th scope="col">Fecha fin</th>
+									<th scope="col">Costo</th>
+									<th scope="col">Cancelar</th>
+								</tr>
+							</thead>
+							<tbody ng-repeat="datos in array">
+								<th scope="row">1</th>
+								<th scope="row">2</th>
+								<th scope="row">3</th>
+								<th scope="row">4</th>
+								<th scope="row">5</th>
+								<th scope="row">6</th>
+								<th scope="row">7</th>
+								<th scope="row">8</th>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

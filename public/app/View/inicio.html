@@ -1,0 +1,109 @@
+<nav class="navbar navbar-dark bg-dark">
+	<a class="navbar-brand " style="color: white">
+		<img src="../public/app/img/hotel1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Hades Hotel
+	</a>
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12 p-0">
+			<div class="card ">
+				<div class="card-body">
+					<div class="container">
+						<div class="row">
+							<div class="form-group col-xl-4 col-sm-12 col-md-4">
+								<label>Llegada</label>
+								<input type="date" class="form-control" ng-model="user.llegada" required id="llegada">
+							</div>
+							<div class="form-group col-xl-4 col-sm-12  col-md-4">
+								<label>Salida</label>
+								<input type="date" class="form-control" ng-model="user.salida" required id="salida">
+							</div>
+							<div class="form-group col-xl-4 col-sm-12  col-md-4">
+								<label>Categoria</label>
+								<select class="form-control" ng-model="user.categoria" id="categoria">
+									<option hidden value="">Seleccione</option>
+									<option value="{{data.id}}" ng-repeat="data in array">{{data.nombre}}</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-6  col-md-6  col-sm-12 offset-sm-0 mt-2 offset-md-3  offset-xl-3" ng-repeat="data in habitacion">
+			<div class="card">
+				<h3 class="card-title ml-3 mt-1">{{data.numero_habitacion}}</h3>
+				<div class="card-body  text-center">
+					<div class="row">
+						<div class="col-xl-6 col-sm-12
+						">
+							<img src="{{data.foto}}" class="img-fluid" width="100" height="100">
+						</div>
+						<div class="col-xl-6 col-sm-12">
+							<span>{{data.descripcion}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer  d-flex justify-content-end mb-sm-2">
+					<div class="col-xl-4 col-sm-12">
+						<button class="btn btn-primary form-control" ng-click="open()">Reservar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="show1">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Confirmar Reserva</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form ng-submit="reservar()" id="form1">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label>Nombre</label>
+							<input type="text" class="form-control" placeholder="Nombre" ng-model="user.nombre" required>
+						</div>
+						<div class="form-group col-md-6">
+							<label>Telefono</label>
+							<input type="number" class="form-control" placeholder="Numero" ng-model="user.telefono" required>
+						</div>
+						<div class="form-group col-md-6">
+							<label>Correo</label>
+							<input type="email" placeholder="introduzca un correo" ng-model="user.correo" class="form-control" required>
+						</div>
+						<div class="form-group col-md-6">
+							<label>Tipo documento</label>
+							<select class="form-control" required ng-model="user.tipo_documento">
+								<option hidden value="">Seleccione</option>
+								<option value="{{data.id}}" ng-repeat="data in documentos">{{data.nombre}}</option>
+							</select>
+						</div>
+						<div class="form-group col-md-6">
+							<label>Número documento</label>
+							<input type="number" class="form-control" placeholder="número docuemento" required ng-model="user.numero_documento">
+						</div>
+						<div class="form-group col-md-6">
+							<label>Número personas</label>
+							<input type="number" class="form-control" placeholder="número personas" required ng-model="user.numero_personas">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						<button type="submit" class="btn btn-primary">Confirmar</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
